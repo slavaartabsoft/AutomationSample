@@ -26,6 +26,10 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//input[@data-test='login-button']")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//h3[@data-test='error']")
+    private WebElement errorTextElement;
+
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -62,5 +66,9 @@ public class LoginPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Timeouts.PAGE_LOAD_TIMEOUT);
         wait.until(ExpectedConditions.visibilityOf(loginButton));
         return this;
+    }
+
+    public String getErrorElementText() {
+       return errorTextElement.getText();
     }
 }
