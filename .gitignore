@@ -1,0 +1,24 @@
+# Gradle build directories
+.gradle/
+build/
+
+# IntelliJ IDEA files
+.idea/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Test report
+test-results/
+
+# WebDriver binary files
+webdriver-*.*
+
+# Firefox Browser artifacts
+geckodriver.log
+
+# Chrome Browser artifacts
+chrome_debug.log
