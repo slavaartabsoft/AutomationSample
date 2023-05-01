@@ -2,7 +2,6 @@ package pages;
 
 import accounts.Account;
 import accounts.AccountBroker;
-import accounts.AccountType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,7 +51,7 @@ public class LoginPage extends BasePage {
 
     //TODO add commentaries about how it works
     public HomePage login() {
-        return login(AccountBroker.getAccount(AccountType.STANDARD_USER), HomePage.class);
+        return login(AccountBroker.getStandardUser(), HomePage.class);
     }
 
     public <T extends BasePage> T login(Account account, Class<T> expectedPage) {

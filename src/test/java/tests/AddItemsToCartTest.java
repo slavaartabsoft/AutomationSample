@@ -1,7 +1,6 @@
 package tests;
 
 import base.BaseTest;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CartPage;
@@ -25,8 +24,4 @@ public class AddItemsToCartTest extends BaseTest {
                 .checkItemIsPresentInCart(CartPage.CardItem.SAUCE_LABS_BOLT_T_SHIRT);
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
 }
