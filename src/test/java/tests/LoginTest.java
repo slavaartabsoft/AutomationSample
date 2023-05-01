@@ -4,7 +4,6 @@ import accounts.AccountBroker;
 import accounts.AccountType;
 import base.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import vocabulary.Texts;
@@ -29,8 +28,4 @@ public class LoginTest extends BaseTest {
                 "Text should be " + expectedErrorText + " but found " + actualErrorText);
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
 }
