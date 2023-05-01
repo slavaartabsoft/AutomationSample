@@ -4,7 +4,7 @@ import utils.ConfigReader;
 
 public class AccountBroker {
 
-    public static Account getAccount(AccountType accountType) {
+    private static Account getAccount(AccountType accountType) {
         return ConfigReader.getAccount(accountType);
     }
 

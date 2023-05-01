@@ -1,7 +1,6 @@
 package tests;
 
 import accounts.AccountBroker;
-import accounts.AccountType;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,7 +19,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginLockedOutUser() {
         openSauceDemo()
-                .login(AccountBroker.getAccount(AccountType.LOCKED_OUT_USER), LoginPage.class)
+                .login(AccountBroker.getLockedOutUser(), LoginPage.class)
                 .checkPageIsOpened();
         String actualErrorText = new LoginPage(driver).getErrorElementText();
         String expectedErrorText = Texts.SORRY_THIS_USER_HAS_BEEN_LOCKED_OUT;
