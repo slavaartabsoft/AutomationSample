@@ -2,6 +2,7 @@ package pages;
 
 import accounts.Account;
 import accounts.AccountBroker;
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,7 +63,7 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage checkPageIsOpened() {
-        WebDriverWait wait = new WebDriverWait(driver, Timeouts.PAGE_LOAD_TIMEOUT);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Timeouts.PAGE_LOAD_TIMEOUT));
         wait.until(ExpectedConditions.visibilityOf(loginButton));
         return this;
     }

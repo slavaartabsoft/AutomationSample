@@ -10,9 +10,9 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
-    implementation 'org.testng:testng:6.14.3'
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.8.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.18.1'
+    implementation group: 'org.testng', name: 'testng', version: '7.9.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.7.0'
     implementation 'org.json:json:20210307'
 }
 

@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -42,7 +43,7 @@ public class HomePage extends BasePage {
     }
 
     public HomePage checkPageIsOpened() {
-        WebDriverWait wait = new WebDriverWait(driver, Timeouts.PAGE_LOAD_TIMEOUT);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Timeouts.PAGE_LOAD_TIMEOUT));
         wait.until(ExpectedConditions.visibilityOf(shoppingCart));
         return this;
     }
